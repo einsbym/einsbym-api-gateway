@@ -8,10 +8,10 @@
 		<version>3.1.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.henrique.cloud-gateway</groupId>
-	<artifactId>cloud-gateway</artifactId>
+	<groupId>br.com.api-gateway</groupId>
+	<artifactId>api-gateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>cloud-gateway-service</name>
+	<name>api-gateway-service</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
