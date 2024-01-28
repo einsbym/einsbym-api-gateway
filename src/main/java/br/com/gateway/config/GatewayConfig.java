@@ -9,18 +9,18 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class GatewayConfig {
 
-	@Value("${api.golang.url}")
-	private String golangApi;
+    @Value("${einsbym.storage.service.url}")
+    private String storageServiceUrl;
 
-	@Value("${api.nest.url}")
-	private String nestApi;
+    @Value("${einsbym.api.url}")
+    private String apiUrl;
 
-	@Bean
-	public RouteLocator routes(RouteLocatorBuilder builder) {
-		return builder.routes()
-				.route(r -> r.path("/minio/**").uri(golangApi))
-				.route(r -> r.path("/graphql/**").uri(nestApi))
-				.build();
-	}
+    @Bean
+    public RouteLocator routes(RouteLocatorBuilder builder) {
+        return builder.routes()
+                .route(r -> r.path("/storage-service/**").uri(storageServiceUrl))
+                .route(r -> r.path("/graphql/**").uri(apiUrl))
+                .build();
+    }
 
 }
