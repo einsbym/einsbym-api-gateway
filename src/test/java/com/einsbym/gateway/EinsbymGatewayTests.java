@@ -1,13 +1,13 @@
-package br.com.henrique.gateway;
+package com.einsbym.gateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MscloudgatewayApplicationTests {
+class EinsbymGatewayTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
