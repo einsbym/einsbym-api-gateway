@@ -1,19 +1,14 @@
 package com.einsbym.gateway.entity;
 
-import java.time.LocalDateTime;
-import java.util.UUID;
-
+import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
-public class LogAccess {
+public class RequestLog {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -92,5 +87,5 @@ public class LogAccess {
     public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
     }
-    
+
 }

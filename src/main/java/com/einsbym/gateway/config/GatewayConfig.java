@@ -1,7 +1,7 @@
 package com.einsbym.gateway.config;
 
-import java.net.InetAddress;
-
+import com.einsbym.gateway.entity.RequestLog;
+import com.einsbym.gateway.repository.RequestLogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
@@ -9,11 +9,9 @@ import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import com.einsbym.gateway.entity.LogAccess;
-import com.einsbym.gateway.repository.LogAccessRepository;
-
 import reactor.core.publisher.Mono;
+
+import java.net.InetAddress;
 
 @Configuration
 public class GatewayConfig {
@@ -25,7 +23,7 @@ public class GatewayConfig {
     private String apiUrl;
 
     @Autowired
-    private LogAccessRepository logAccessRepository;
+    private RequestLogRepository requestLogRepository;
 
     @Bean
     public RouteLocator routes(RouteLocatorBuilder builder) {
@@ -55,12 +53,12 @@ public class GatewayConfig {
                     executionTime = durationInSeconds + "s";
                 }
 
-                LogAccess logAccess = new LogAccess();
-                logAccess.setMethod(method);
-                logAccess.setPath(path);
-                logAccess.setIp(ipAddress);
-                logAccess.setExecutionTime(executionTime);
-                logAccessRepository.save(logAccess);
+                RequestLog requestLog = new RequestLog();
+                requestLog.setMethod(method);
+                requestLog.setPath(path);
+                requestLog.setIp(ipAddress);
+                requestLog.setExecutionTime(executionTime);
+                requestLogRepository.save(requestLog);
             }));
         };
     }
