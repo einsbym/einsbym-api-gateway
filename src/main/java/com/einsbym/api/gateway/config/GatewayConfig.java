@@ -1,7 +1,7 @@
-package com.einsbym.gateway.config;
+package com.einsbym.api.gateway.config;
 
-import com.einsbym.gateway.entity.RequestLog;
-import com.einsbym.gateway.repository.RequestLogRepository;
+import com.einsbym.api.gateway.entity.RequestLog;
+import com.einsbym.api.gateway.repository.RequestLogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.gateway.filter.GlobalFilter;

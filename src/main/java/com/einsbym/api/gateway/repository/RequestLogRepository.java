@@ -1,6 +1,6 @@
-package com.einsbym.gateway.repository;
+package com.einsbym.api.gateway.repository;
 
-import com.einsbym.gateway.entity.RequestLog;
+import com.einsbym.api.gateway.entity.RequestLog;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

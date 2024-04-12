@@ -1,4 +1,4 @@
-package com.einsbym.gateway.entity;
+package com.einsbym.api.gateway.entity;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
