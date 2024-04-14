@@ -32,7 +32,7 @@ public class GatewayConfig {
     public RouteLocator routes(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route(r -> r.path("/storage-service/**").uri(storageServiceUrl))
-                .route(r -> r.path("/graphql/**").uri(apiUrl))
+                .route(r -> r.path("/**").uri(apiUrl))
                 .build();
     }
 
