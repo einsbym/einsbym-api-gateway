@@ -1,0 +1,20 @@
+services:
+  einsbym-api-gateway:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: einsbym-api-gateway
+    ports:
+      - 8888:8888
+    networks:
+      - einsbym-network
+    environment:
+      DB_HOST: einsbym-database
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASSWORD: root
+      DB_NAME: einsbym
+
+networks:
+  einsbym-network:
+    external: true
