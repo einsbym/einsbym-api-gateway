@@ -9,11 +9,16 @@ services:
     networks:
       - einsbym-network
     environment:
-      DB_HOST: einsbym-database
-      DB_PORT: 5432
-      DB_USER: postgres
-      DB_PASSWORD: root
-      DB_NAME: einsbym
+      EINSBYM_SERVER_PORT: 8888
+      EINSBYM_DB_HOST: einsbym-database
+      EINSBYM_DB_PORT: 5432
+      EINSBYM_DB_USER: postgres
+      EINSBYM_DB_PASSWORD: root
+      EINSBYM_DB_NAME: einsbym
+      EINSBYM_STORAGE_SERVICE_HOST: einsbym-storage
+      EINSBYM_STORAGE_SERVICE_PORT: 8080
+      EINSBYM_API_HOST: einsbym-api
+      EINSBYM_API_PORT: 4000
 
 networks:
   einsbym-network:
