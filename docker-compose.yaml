@@ -15,6 +15,8 @@ services:
       EINSBYM_DB_USER: postgres
       EINSBYM_DB_PASSWORD: root
       EINSBYM_DB_NAME: einsbym
+      EINSBYM_DB_DDL_AUTO: update
+      EINSBYM_DB_SHOW_SQL: true
       EINSBYM_STORAGE_SERVICE_HOST: einsbym-storage
       EINSBYM_STORAGE_SERVICE_PORT: 8080
       EINSBYM_API_HOST: einsbym-api
